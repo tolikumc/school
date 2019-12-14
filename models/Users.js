@@ -1,6 +1,6 @@
 
 
-modeule.exports = (sequelize, Datatypes) =>{
+module.exports = (sequelize, Datatypes) =>{
     return sequelize.define('user', {
         id:{
             type: Datatypes.UUID,
@@ -36,8 +36,6 @@ modeule.exports = (sequelize, Datatypes) =>{
             isEmail: true,
             len: [7, 100]
         },
-        update_at:{type: Datatypes.DATETIME},
-        delete_at:{type: Datatypes.DATETIME},
     },{
         underscored: true,
         paranoid: true
